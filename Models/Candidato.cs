@@ -13,4 +13,16 @@ public class Candidato
     public string Foto { get; set; }
 
     public string Postulacion { get; set; }
+
+    public Candidato(int idCandidato, int idPartido, string apellido, string nombre, DateTime fechaNacimiento, string foto, string postulacion)
+    {
+        IdCandidato = idCandidato;
+        IdPartido = idPartido;
+        Apellido = apellido;
+        Nombre = nombre;
+        FechaNacimiento = fechaNacimiento;
+        Foto = foto;
+        Postulacion = postulacion;
+    }
+
 }

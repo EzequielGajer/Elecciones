@@ -16,7 +16,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         List<Partido> partidos = BD.ListarPartidos();
-        ViewBag.ListaPartidos = partidos;
+        ViewBag.Partidos = partidos;
 
         return View("Index");
     }
@@ -45,7 +45,7 @@ public class HomeController : Controller
     {
         ViewBag.IdPartido = idPartido;
 
-        return View("FormularioCandidato");
+        return View("AgregarCandidato");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

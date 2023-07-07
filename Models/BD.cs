@@ -4,7 +4,7 @@ using Dapper;
 public static class BD
 {
 
-    private static string _ConnectionString = @"Server=localhost; DataBase=NombreBase; Trusted_Connection=True;";
+    private static string _ConnectionString = @"Server=localhost; DataBase=Elecciones2023; Trusted_Connection=True;";
 
     public static void AgregarCandidato(Candidato can)
     {

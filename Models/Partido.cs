@@ -13,4 +13,16 @@ public class Partido
     public int CantidadDiputados { get; set; }
 
     public int CantidadSenadores { get; set; }
+
+    public Partido(int idPartido, string nombre, string logo, string sitioWeb, DateTime fechaFundacion, int cantidadDiputados, int cantidadSenadores)
+    {
+        IdPartido = idPartido;
+        Nombre = nombre;
+        Logo = logo;
+        SitioWeb = sitioWeb;
+        FechaFundacion = fechaFundacion;
+        CantidadDiputados = cantidadDiputados;
+        CantidadSenadores = cantidadSenadores;
+    }
+
 }
