@@ -1,22 +1,35 @@
-html {
-  font-size: 14px;
+header nav a {
+  text-decoration: none;
+  padding: 30px;
+  list-style: none;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+
+.Lista {
+  display: flex;
+  list-style: none;
+  margin: 65px;
+  margin-left: 185px;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+
+
+header nav {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.logo {
+  margin: 30px;
+  margin-top: 17px;
+  margin-left: 100px;
+  margin-right: 255px;
 }
 
-body {
-  margin-bottom: 60px;
+.logo img {
+  width: 130px;
+  border-radius: 50%;
 }
