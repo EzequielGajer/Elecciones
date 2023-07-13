@@ -18,7 +18,7 @@ public class HomeController : Controller
         List<Partido> partidos = BD.ListarPartidos();
         ViewBag.Partidos = partidos;
 
-        return View("Index");
+        return View("Index",partidos);
     }
 
     public IActionResult VerDetallePartido(int idPartido)
@@ -29,7 +29,7 @@ public class HomeController : Controller
         ViewBag.Partido = partido;
         ViewBag.Candidatos = candidatos;
 
-        return View("DetallePartido");
+        return View("VerDetallePartido",partido);
     }
 
     public IActionResult VerDetalleCandidato(int idCandidato)

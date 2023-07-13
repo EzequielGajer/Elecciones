@@ -1,10 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Index";
 }
+
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Documents.styles.css" asp-append-version="true" />
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@model List<Partido>
+
+@foreach (var partido in Model)
+{
+    <div class="card">
+        <img src="@partido.Logo" alt="Logo del partido">
+        <div class="card-body">
+            <h5 class="card-title">@partido.Nombre</h5>
+            <a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = partido.IdPartido })' class="btn btn-primary">Ver detalles</a>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
 
 

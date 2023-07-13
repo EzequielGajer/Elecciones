@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Detalle del Partido</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@model Partido
+
+<h2>@Model.Nombre</h2>
+<p>Logo: <img src="@Model.Logo" alt="Logo del partido"></p>
+<p>Sitio Web: <a href="@Model.SitioWeb">@Model.SitioWeb</a></p>
+<p>Fecha de Fundación: @Model.FechaFundacion</p>
+<p>Cantidad de Diputados: @Model.CantidadDiputados</p>
+<p>Cantidad de Senadores: @Model.CantidadSenadores</p>
+
+<h3>Candidatos</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var candidato in ViewBag.Candidatos)
+        {
+            <tr>
+                <td>@candidato.Nombre</td>
+                <td>@candidato.Edad</td>
+
+                <td>
+                    <a href='@Url.Action("VerDetalleCandidato", "Home", new { idCandidato = candidato.IdCandidato, idPartido = Model.IdPartido})'>Ver detalles del candidato</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<a href='@Url.Action("AgregarCandidato", "Home", new { idPartido = Model.IdPartido })'>Agregar un candidato</a>
+
+
+

@@ -33,3 +33,7 @@ header nav {
   width: 130px;
   border-radius: 50%;
 }
+
+.logo li {
+  list-style: none;
+}
