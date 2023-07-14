@@ -32,7 +32,11 @@
         {
             <tr>
                 <td>@candidato.Nombre</td>
-                <td>@candidato.Edad</td>
+                <td>@candidato.Apellido</td>
+                <td>@candidato.FechaNacimiento</td>
+                <td>@candidato.Foto</td>
+                <td>@candidato.Postulacion</td>
+
 
                 <td>
                     <a href='@Url.Action("VerDetalleCandidato", "Home", new { idCandidato = candidato.IdCandidato, idPartido = Model.IdPartido})'>Ver detalles del candidato</a>

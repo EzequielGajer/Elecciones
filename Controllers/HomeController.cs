@@ -38,7 +38,7 @@ public class HomeController : Controller
 
         ViewBag.Candidato = candidato;
 
-        return View("DetalleCandidato");
+        return View("VerDetalleCandidato");
     }
 
     public IActionResult AgregarCandidato(int idPartido)
