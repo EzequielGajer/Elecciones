@@ -12,16 +12,18 @@
 
 @model List<Partido>
 
-@foreach (var partido in Model)
-{
-    <div class="card">
-        <img src="@partido.Logo" alt="Logo del partido">
-        <div class="card-body">
-            <h5 class="card-title">@partido.Nombre</h5>
-            <a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = partido.IdPartido })' class="btn btn-primary">Ver detalles</a>
+<div class="container">
+    @foreach (var partido in Model)
+    {
+        <div class="card">
+            <img src="@partido.Logo" alt="Logo del partido">
+            <div class="card-body">
+                <h5 class="card-title">@partido.Nombre</h5>
+                <a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = partido.IdPartido })' class="btn btn-primary">Ver detalles</a>
+            </div>
         </div>
-    </div>
-}
+    }
+</div>
 
 
 

@@ -1,0 +1,127 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para el encabezado */
+  .header-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .header-description {
+    font-size: 16px;
+  }
+  
+  /* Estilos para la información del partido */
+  .partido-info-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .partido-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .partido-info p {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para la tabla de candidatos */
+  .candidatos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+  }
+  
+  .candidatos-table th,
+  .candidatos-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .candidatos-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para los enlaces de acciones */
+  .action-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .action-link2 {
+    margin-top: 35px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-link:hover {
+    color: white;
+    background-color: #0669d3;
+  }
+
+  .action-link2:hover {
+    color: white;
+    background-color: #0669d3;
+  }
+
+  /* Keyframes para la animación de botón */
+  @keyframes btnPulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Media query para dispositivos con ancho menor a 768px */
+  @media screen and (max-width: 768px) {
+    .header-title {
+      font-size: 30px;
+    }
+    .partido-name {
+      font-size: 20px;
+    }
+  }
+  
+
+  .img-logo {
+    border: 2px black solid;
+  }

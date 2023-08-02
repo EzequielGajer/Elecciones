@@ -8,12 +8,14 @@ public static class BD
 
     public static void AgregarCandidato(Candidato can)
     {
-        string SQL = "INSERT INTO Candidato (IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@pIdPartido, @pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pPostulacion)";
-        using (SqlConnection db = new SqlConnection(_ConnectionString))
-        {
-            db.Execute(SQL, new {pIdPartido = can.IdPartido, pApellido = can.Apellido, pNombre = can.Nombre, pFechaNacimiento = can.FechaNacimiento, pFoto = can.Foto, pPostulacion = can.Postulacion});
-        }
+    string SQL = "INSERT INTO Candidato (IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@pIdPartido, @pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pPostulacion)";
+    using (SqlConnection db = new SqlConnection(_ConnectionString))
+    {
+        db.Execute(SQL, new {pIdPartido = can.IdPartido, pApellido = can.Apellido, pNombre = can.Nombre, pFechaNacimiento = can.FechaNacimiento, pFoto = can.Foto, pPostulacion = can.Postulacion});
     }
+
+
+}
 
     public static int EliminarCandidato(int idCandidato)
     {

@@ -14,23 +14,28 @@ header nav a {
   margin-left: 185px;
 }
 
+header{
 
+  border-bottom: 2px rgb(116, 181, 255) solid;
+
+}
 
 header nav {
-  color: rgb(255, 255, 255);
+  background-color: white;
   display: flex;
   flex-direction: row;
+  border-bottom: 2px rgb(116, 181, 255) solid;
 }
 
 .logo {
   margin: 30px;
-  margin-top: 17px;
+  margin-top: 30px;
   margin-left: 100px;
   margin-right: 255px;
 }
 
 .logo img {
-  width: 130px;
+  width: 100px;
   border-radius: 50%;
 }
 

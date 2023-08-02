@@ -1,8 +1,42 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Agregar Candidato";
 }
 
-<div class="text-center">
-    <h1 class="display-4">AgregarCandidato</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" action='@Url.Action("GuardarCandidato", "Home")'>
+    @if (ViewBag.Partido != null)
+    {
+        <input type="hidden" name="IdPartido" value="@ViewBag.Partido.IdPartido" />
+    }
+
+    <div>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" required />
+    </div>
+
+    <div>
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" required />
+    </div>
+
+    <div>
+        <label for="FechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="FechaNacimiento" name="FechaNacimiento" required />
+    </div>
+
+    <div>
+        <label for="Foto">URL de la foto del candidato:</label>
+        <input type="text" id="Foto" name="Foto" required />
+    </div>
+
+    <div>
+        <label for="Postulacion">Postulación:</label>
+        <input type="text" id="Postulacion" name="Postulacion" required />
+    </div>
+
+    <div>
+        <button type="submit">Guardar Candidato</button>
+    </div>
+</form>
+

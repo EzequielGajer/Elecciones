@@ -2,53 +2,56 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Detalle del Partido</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link rel="stylesheet" href="~/css/partido.css" asp-append-version="true" />
+
+<div class="container">
+    <div class="header-container">
+        <h1 class="header-title">Detalle del Partido</h1>
+        <p class="header-description">Información sobre el partido político</p>
+    </div>
 </div>
 
 @model Partido
 
-<h2>@Model.Nombre</h2>
-<p>Logo: <img src="@Model.Logo" alt="Logo del partido"></p>
-<p>Sitio Web: <a href="@Model.SitioWeb">@Model.SitioWeb</a></p>
-<p>Fecha de Fundación: @Model.FechaFundacion</p>
-<p>Cantidad de Diputados: @Model.CantidadDiputados</p>
-<p>Cantidad de Senadores: @Model.CantidadSenadores</p>
+<div class="container partido-info-container">
+    <h2 class="partido-name">@Model.Nombre</h2>
+    <p><img class="img-logo" src="@Model.Logo" alt="Logo del partido"></p>
+    <p><a href="@Model.SitioWeb" class="action-link">@Model.SitioWeb</a></p>
+    <p>Fecha de Fundación: @Model.FechaFundacion</p>
+    <p>Cantidad de Diputados: @Model.CantidadDiputados</p>
+    <p>Cantidad de Senadores: @Model.CantidadSenadores</p>
 
-<h3>Candidatos</h3>
+    <h3>Candidatos</h3>
 
-<table>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (var candidato in ViewBag.Candidatos)
-        {
+    <table class="candidatos-table">
+        <thead>
             <tr>
-                <td>@candidato.Nombre</td>
-                <td>@candidato.Apellido</td>
-                <td>@candidato.FechaNacimiento</td>
-                <td>@candidato.Foto</td>
-                <td>@candidato.Postulacion</td>
-
-
-                <td>
-                    <a href='@Url.Action("VerDetalleCandidato", "Home", new { idCandidato = candidato.IdCandidato, idPartido = Model.IdPartido})'>Ver detalles del candidato</a>
-                </td>
-
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Postulación</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
+        </thead>
 
-</table>
+        <tbody>
+            @foreach (var candidato in ViewBag.Candidatos)
+            {
+                <tr>
+                    <td>@candidato.Nombre</td>
+                    <td>@candidato.Apellido</td>
+                    <td>@candidato.FechaNacimiento</td>
+                    <td>@candidato.Postulacion</td>
+                    <td>
+                        <a href='@Url.Action("VerDetalleCandidato", "Home", new { idCandidato = candidato.IdCandidato, idPartido = Model.IdPartido })' class="action-link">Ver detalles del candidato</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
-<a href='@Url.Action("AgregarCandidato", "Home", new { idPartido = Model.IdPartido })'>Agregar un candidato</a>
+    <a href='@Url.Action("AgregarCandidato", "Home", new { idPartido = Model.IdPartido })' class="action-link2">Agregar un candidato</a>
+</div>
 
 
 

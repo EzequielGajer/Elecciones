@@ -1,0 +1,90 @@
+body{
+
+  background-color: #eeeeee;
+
+}
+
+.card {
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
+  
+
+  .hero {
+    background-image: url('https://www.erzbistum-paderborn.de/wp-content/uploads/sites/6/2021/10/Kirchensteuerrats-Wahl_header-1-aspect-ratio-4-1-1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    animation: slideIn 1s ease;
+  }
+
+
+  .hero h1 {
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .hero p {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 40px;
+    color: black;
+  }
