@@ -70,7 +70,7 @@ public class HomeController : Controller
         ViewBag.Partido = partido;
         ViewBag.Candidatos = candidatos;
 
-        return View("DetallePartido");
+        return View("VerDetallePartido");
     }
 
     public IActionResult Elecciones()

@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
@@ -69,7 +69,7 @@ body {
     font-weight: bold;
   }
   
-  /* Media queries para ajustar el diseño en dispositivos móviles */
+  
   @media screen and (max-width: 600px) {
     .candidate-image {
       width: 150px;

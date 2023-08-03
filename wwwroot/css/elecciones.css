@@ -1,0 +1,72 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .elections-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
+  }
+  
+  .elections-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .elections-info {
+    font-size: 1.2rem;
+  }
+  
+  .elections-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .elections-list li {
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .elections-list p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+ 
+  .elections-list li {
+    position: relative;
+  }
+  
+  .elections-list li:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #007bff;
+  }
+  
+  
+  @media screen and (min-width: 600px) {
+    .elections-list {
+      column-count: 2;
+      column-gap: 40px;
+    }
+  }
+  
