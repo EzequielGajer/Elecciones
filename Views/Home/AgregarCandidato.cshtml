@@ -5,14 +5,14 @@
 <h2>@ViewData["Title"]</h2>
 
 <form method="post" action='@Url.Action("GuardarCandidato", "Home")'>
-    @if (ViewBag.Partido != null)
+    @if (ViewBag.IdPartido != null)
     {
-        <input type="hidden" name="IdPartido" value="@ViewBag.Partido.IdPartido" />
+        <input type="hidden" name="IdPartido" value="@ViewBag.IdPartido" />
     }
 
     <div>
         <label for="Nombre">Nombre:</label>
-        <input type="text" id="Nombre" name="Nombre" required />
+        <input type="text" autocomplete="off" id="Nombre" name="Nombre" required />
     </div>
 
     <div>

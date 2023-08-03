@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+
+}
+
+.creditos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #afd8ff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: 0.6s;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100%);
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    
+}
+
+.card p {
+    margin: 10px 0;
+    color: #777;
+}
+
+
+/* Animación de sombra */
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.card:nth-child(1) {
+    animation: slideeIn 1s forwards;
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation: slideeIn 1s forwards;
+    animation-delay: 0.4s;
+}
+
+.card:hover {
+    cursor: pointer;
+    animation: shadowPulse 1s infinite;
+    transform: translateY(-10px);
+}
+
+/* Media query para ajustar el diseño en dispositivos móviles */
+@media (max-width: 600px) {
+    .creditos-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin: 20px auto;
+    }
+}

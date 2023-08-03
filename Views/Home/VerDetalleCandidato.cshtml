@@ -1,26 +1,33 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Detalle del Candidato";
     var candidato = ViewBag.Candidato as Candidato;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Detalle del Candidato</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/candidato.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="display-4">Detalle del Candidato</h1>
 
-@if (candidato != null)
-{
-    <h2>Nombre: @candidato.Nombre</h2>
-    <p>Apellido: @candidato.Apellido</p>
-    <p>Fecha de Nacimiento: @candidato.FechaNacimiento</p>
-    <p>Foto: <img src="@candidato.Foto" alt="Foto del candidato"></p>
-    <p>Postulación: @candidato.Postulacion</p>
+        @if (candidato != null)
+        {
+            <img class="candidate-image" src="@candidato.Foto" alt="Foto del candidato">
+            <h2 class="candidate-name">@candidato.Nombre @candidato.Apellido</h2>
+            <p class="candidate-info">Fecha de Nacimiento: @candidato.FechaNacimiento</p>
+            <p class="candidate-info">Postulación: @candidato.Postulacion</p>
 
-    <div>
-        <a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = candidato.IdPartido })'>Volver al partido del candidato</a>
+            <div>
+                <a class="return-link" href='@Url.Action("VerDetallePartido", "Home", new { idPartido = candidato.IdPartido })'>Volver al partido del candidato</a>
+            </div>
+        }
+        else
+        {
+            <p class="error-message">No se encontró información del candidato.</p>
+        }
     </div>
-}
-else
-{
-    <p>No se encontró información del candidato.</p>
-}
+</body>
+</html>

@@ -33,7 +33,6 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-
         <tbody>
             @foreach (var candidato in ViewBag.Candidatos)
             {
@@ -43,7 +42,7 @@
                     <td>@candidato.FechaNacimiento</td>
                     <td>@candidato.Postulacion</td>
                     <td>
-                        <a href='@Url.Action("VerDetalleCandidato", "Home", new { idCandidato = candidato.IdCandidato, idPartido = Model.IdPartido })' class="action-link">Ver detalles del candidato</a>
+                        <a href='@Url.Action("VerDetalleCandidato", "Home", new { idCandidato = candidato.IdCandidato })' class="action-link">Ver detalles del candidato</a>
                     </td>
                 </tr>
             }

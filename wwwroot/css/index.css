@@ -61,6 +61,12 @@ body{
   }
   
 
+  .display-4 {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-family: 'Segoe UI';
+  }
+
   .hero {
     background-image: url('https://www.erzbistum-paderborn.de/wp-content/uploads/sites/6/2021/10/Kirchensteuerrats-Wahl_header-1-aspect-ratio-4-1-1.jpg');
     background-size: cover;
